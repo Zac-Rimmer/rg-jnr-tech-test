@@ -5,18 +5,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>The Regatta Group Junior Front End Developer Tech Test</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="./css/styles.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <!-- <script src="./test.js"></script> -->
     </head>
     <body>
-        <div id="app">Hello {{ message }}</div>
-        <script>
-            var app = new Vue({
-                el: "#app",
-                data: {
-                    message: "Zac",
-                },
-            });
-        </script>
+        <header>
+            <img src="./images/Regatta-Group-Logo.png" alt="The Regatta Group" id="logo"/>
+        </header>
+        <section id="app">
+            {{message}}
+        </section>
+        <footer>
+            <span>© The Regatta Group</span>
+        </footer>
     </body>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+    </script>
 </html>
