@@ -15,7 +15,7 @@
 </ol>
 
 ## Bonus Tasks:
-<p>For bonus tasks, we are asking you to use the VueJS framework. This has been linked up in the HTML file using the CDN so you don't have to worry about doing so. Any script you write needs to be setup within the index.html file rathan than an external file.</p>
+<p>For bonus tasks, we are asking you to use the VueJS framework. This has been linked up in the HTML file using the CDN so you don't have to worry about doing so. Any script you write needs to be setup within the index.html file rather than an external file.</p>
 <p>If you are not fully comfortable using the VueJS framework, please try to complete the following bonus tasks as much as you can before submitting your final build. If you do try to complete the following tasks but don't manage to figure them out, please don't delete the code and just comment out. We will review the commented out code and can provide feedback.</p>
 <ol>
     <li>Instead of inputting the press contact details in through the HTML, using VueJS write a v-for that prints out the name and contact details for the press section.</li>
