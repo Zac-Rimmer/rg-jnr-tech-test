@@ -16,10 +16,94 @@
             <img src="./images/Regatta-Group-Logo.png" alt="The Regatta Group" id="logo"/>
         </header>
         <section id="app">
-            <!-- Code Here -->
+            <nav class="center-txt">
+                <a>Home</a> |
+                <a>About</a> |
+                <a>Contact Us</a>
+            </nav>
+            <div id="cover-1" class="cover">When our adventure began<br />There were just 12 of us<br />It was 1981</div>
+            <div class="content">
+                <h1>About Regatta</h1>
+                <div class="paragraph-sm">
+                    <strong>When our adventure began, there were just 12 of us. It was 1981.</strong>
+                    <p>Back then the outdoors was about intrepid explorers, but we just wanted to open our front door and have fun. And we wanted everyone else out there with us too.</p>
+                    <p>So we made great products that people could afford, clothing to get them outside and enjoying the fresh air without worrying what it would cost. That’s still what counts for us.</p>
+                    <p>And we’re still doing it. Still thinking of new ways to help people, still inspired by the great outdoors and still hanging by the front door when you need us.</p>
+                    <p>And it’s still what counts for the ramblers, amblers, hikers and bikers. campers and gardeners and daily commuters, dog walkers, show jumpers and multi-tasking mums, picnickers, backpackers, kids playing ball and dads at the footie, urban roamers and beachcombers and puddle-loving children and everyone else we’ve helped start their own adventure.</p>
+                    <p>There were 12 of us</p>
+                    <p>Now there are millions</p>
+                    <strong>For every adventure</strong>
+                </div>
+            </div>
+            <div id="cover-2" class="cover">Press</div>
+            <div class="content">
+                <h1>Welcome to Our Press Area</h1>
+                <div class="paragraph-sm">
+                    <p>If you have a press enquiry our PR team will be happy to help.</p>
+                    <h2>Partnerships, Sponsorships and Enquires</h2>
+                    <ul id="contact-details">
+                        <li v-for="item in items">
+                            <component :is="item.link?'a':'span'" :href="item.link">{{ item.message }}</component>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-2">
+                <div id="img-C2" class="grid-item-img">
+                    <span class="badge">Mens</span>
+                </div>
+                <div id="img-C1" class="grid-item-img">
+                    <span class="badge">Womens</span>
+                </div>
+                <div id="img-C3" class="grid-item-img">
+                    <span class="badge">Holiday Shop</span>
+                </div>
+                <div id="img-C4" class="grid-item-img">
+                    <span class="badge">Waterproof Jackets</span>
+                </div>
+            </div>
         </section>
         <footer>
-            <span>© The Regatta Group</span>
+            <p class="center-txt">© The Regatta Group</p>
         </footer>
+        <hr />
+        <div id="counter">
+            <div>
+                <button :disabled="amount === 0" @click="decrement()">Decrease Number</button>
+                <button :disabled="amount === 10" @click="increment()">Increase Number</button>
+            </div>
+            <span>You have clicked the button: {{ amount }} times.</span>
+        </div>
     </body>
+
+    <script>
+        var counter = new Vue({
+            el: '#counter',
+            data() {
+                return {
+                    amount: 0,
+                };
+            },
+            methods: {
+                increment() {
+                    this.amount++;
+                },
+                decrement() {
+                    this.amount--;
+                },
+            },
+        });
+
+        var contactDetails = new Vue({
+            el: '#contact-details',
+            data: {
+              items: [
+                { message: 'John Smith' },
+                { message: '07700 000 000' },
+                { message: 'j.smith@test.com', link: 'mailto:j.smith@test.com' }
+              ]
+            }
+          })
+    </script>
+
 </html>
