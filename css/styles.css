@@ -5,7 +5,7 @@ body {
 }
 
 #logo {
-  max-width: 250px;
+  max-width: 240px;
   display: block;
   margin: 0 auto;
   padding: 10px;
@@ -54,33 +54,142 @@ nav a {
   line-height: 1px;
 }
 
+@media (max-width: 480px) {
+  .centered p {
+    font-size: 25px;
+    width: 450px;
+  }
+  .banner {
+    overflow: hidden;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+  #description {
+    max-width: 430px;
+  }
+
+  #press-enquiry,
+  ul,
+  #welcome,
+  #Partnerships {
+    max-width: 400px;
+  }
+
+  #centered-c1 {
+    width: 100px;
+    background-color: black;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    border-radius: 3px;
+  }
+
+  #centered-c2 {
+    width: 100px;
+    background-color: black;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+  }
+
+  #centered-c3 {
+    width: 140px;
+    background-color: black;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+  }
+
+  #centered-c4 {
+    width: 160px;
+    background-color: black;
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
 #description {
-  margin-left: 200px;
-  margin-right: 200px;
+  width: 1000px;
+  margin: 0 auto;
   line-height: 20px;
   font-size: 13px;
 }
 
-#herosImages {
-  display: flex;
-  margin-left: 200px;
+#singleImages {
   gap: 20px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-#singleImages img {
-  width: 500px;
-  margin: 8px;
-}
-
-#press-area {
-  margin-left: 200px;
+#press-enquiry,
+ul {
+  width: 1000px;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0 auto;
 }
 
 #welcome,
 #Partnerships {
+  width: 1000px;
+  margin: 0 auto;
   font-size: 25px;
+}
+li a {
+  color: blue;
 }
 
 footer p {
   text-align: center;
 }
+
+/* #centered-c1 {
+  width: 80px;
+  background-color: black;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#centered-c2 {
+  width: 80px;
+  background-color: black;
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#centered-c3 {
+  width: 140px;
+  background-color: black;
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#centered-c4 {
+  width: 160px;
+  background-color: black;
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
