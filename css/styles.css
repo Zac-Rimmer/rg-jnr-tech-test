@@ -58,28 +58,29 @@ nav a {
   margin-left: 200px;
   margin-right: 200px;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 #herosImages {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  margin-left: 200px;
+  gap: 20px;
 }
 
 #singleImages img {
-  margin-right: 50%;
-  width: 400px;
+  width: 500px;
+  margin: 8px;
 }
 
 #press-area {
   margin-left: 200px;
-  margin-right: 200px;
 }
 
-#welcome {
-  font-size: 25px;
-}
+#welcome,
 #Partnerships {
   font-size: 25px;
+}
+
+footer p {
+  text-align: center;
 }
