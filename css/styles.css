@@ -54,9 +54,32 @@ nav a {
   line-height: 1px;
 }
 
-article {
+#description {
   margin-left: 200px;
   margin-right: 200px;
   line-height: 20px;
   font-size: 15px;
+}
+
+#herosImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#singleImages img {
+  margin-right: 50%;
+  width: 400px;
+}
+
+#press-area {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+#welcome {
+  font-size: 25px;
+}
+#Partnerships {
+  font-size: 25px;
 }
