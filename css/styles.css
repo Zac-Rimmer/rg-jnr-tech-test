@@ -45,8 +45,16 @@ nav a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .centered p {
   font-weight: 600;
   font-size: 30px;
   line-height: 1px;
+}
+
+article {
+  margin-left: 150px;
+  margin-right: 150px;
+  line-height: 20px;
+  font-size: 15px;
 }
