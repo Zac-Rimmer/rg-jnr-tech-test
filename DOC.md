@@ -4,11 +4,11 @@ Thank you for giving me the opportunity to complete this task. Below is a readme
 
 ## General Overview
 
-I did not use any frameworks or libraries for this task as I wanted to showcase my skills without them. I have experience using multiple frameworks and libraries throughout my personal and professional portfolio, which can be provided for reference if required.
+I did not use any frameworks or libraries for the main task as I wanted to showcase my skills without them. I have experience using multiple frameworks and libraries for front-end development throughout my personal and professional portfolio, which can be provided for reference if required.
 
 This task was completed with a Mobile-First Approach. All elements and CSS stylings have been created for mobile view, and media queries have been included to account for desktop views. This is due to there being a mostly 50/50 split of mobile vs desktop users. It negates most issues with spacing, including whitespace, margins, font sizes etc, as well as tackling loading times at the base of development. Rather than going back to edit and potentially re-arrange elements of a page, the base design is already in place and translates better to desktop than desktop does to mobile. A Mobile-First Approach can also reduce the amount of code needed for styling, as you tend to add or replace styling for desktop rather than needing to remove it completely.
 
----
+# Main Task
 
 ## Section
 
@@ -31,7 +31,7 @@ For the purpose of this task, SEO has not been taken into account, so it is not 
 
 ## Main Banner Text, About Text and Press Text
 
-For all of these text sections, I used one p tag and multiple br tags to create breaks in the paragraphs. This is due to the text being one whole paragraph broken into separate lines rather than them being individual and unrelated lines of text. Styling can still be manipulated however, if more styling or emphasis was needed or if the lines of text were unrelated, or for SEO purposes, it would be more appropriate to place these in separate p tags.
+For the main banner and about text sections, I used one p tag and multiple br tags to create breaks in the paragraphs. This is due to the text being one whole paragraph broken into separate lines rather than them being individual and unrelated lines of text. Styling can still be manipulated however, if more styling or emphasis was needed or if the lines of text were unrelated, or for SEO purposes, it would be more appropriate to place these in separate p tags.
 
 The Press Text has been separated into different element tags due to the styling and formatting being different for each line of text.
 
@@ -49,9 +49,17 @@ The hover effects were added for improved user experience. (I also personally re
 
 ---
 
+# Additional Points
+
+### Links
+
+I added links in from the main Regatta site to make the task page a "working" page. I left the link to the email address blank.
+
+---
+
 ### Tests
 
-My written code in both index.html and style.css pass the relevant validation tests. 
+My written code in both index.html and style.css passes the relevant validation tests. 
 
 ---
 
@@ -59,7 +67,8 @@ My written code in both index.html and style.css pass the relevant validation te
 
 - Page content to be split into correct sections based on semantic HTML
 - Streamline CSS, namely the banner background image responsive positions
-- Collections blocks to be in one container and images to change from mobile to desktop and vice versa dependant on screen size
+- ~~Collections blocks to be in one container and images to change from mobile to desktop and vice versa dependant on screen size~~ 
+    - Decided to do this one as it didn't take too much time and looks cleaner code wise
 
 ---
 
