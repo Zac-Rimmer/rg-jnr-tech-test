@@ -45,9 +45,17 @@ nav li a:hover, nav li a:active {
 
 .main-banner {
     background-image: url("/images/banners/Main-Banner.jpeg");
+    margin-left: -25px;
+}
+
+.press-banner {
+    background-image: url("/images/banners/Press-Banner.jpeg");
+    margin-left: -37px;
+}
+
+.main-banner, .press-banner {
     background-size: cover;
     height: 365px;
-    margin-left: -14px;
     display: flex;
 }
 
@@ -57,24 +65,21 @@ nav li a:hover, nav li a:active {
     text-align: center;
     font-size: 28px;
     font-weight: bold;
-    padding-left: 14px;
 }
 
-/* About/Press Area section widths */
+.main-banner p {
+    padding-left: 25px;
+}
+
+.press-banner p {
+    padding-left: 37px;
+}
+
+/* About/Press Text section widths */
 
 .about, .press-text {
     width: 90%;
     margin: auto;
-}
-
-/* Press Banner */
-
-.press-banner {
-    background-image: url(/images/banners/Press-Banner.jpeg);
-    background-size: cover;
-    height: 365px;
-    margin-left: -15px;
-    display: flex;
 }
 
 /* Collections */
@@ -110,16 +115,16 @@ nav li a:hover, nav li a:active {
     opacity: 0.8;
 }
 
-.collections div p {
+.collections div span {
     position: absolute;
     padding: 10px;
     color: white;
     background-color: black;
-    bottom: 2%;
+    bottom: 4%;
     border-radius: 10px;
 }
 
-.collections div p:hover {
+.collections div span:hover {
     color: #d2d2d2;
 }
 
@@ -131,7 +136,7 @@ footer {
     padding: 10px 0;
 }
 
-/* Media Queries - Tablet/Desktop view*/
+/* Media Queries - Tablet/Desktop views */
 
 @media screen and (min-width: 768px) {
     .main-banner, .press-banner {
