@@ -14,36 +14,40 @@
     <link href="./css/styles.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script type="module">
-      import { createApp } from 'https://unpkg.com/petite-vue?module'
-      // start of Vue function 
+      import { createApp } from "https://unpkg.com/petite-vue?module";
+      // start of Vue function
       createApp({
         count: 0,
         // getters
         get plusOne() {
-          return this.count + 1
+          return this.count + 1;
         },
         // methods
         increment() {
-          if(this.count < 10){
-            this.count++
+          if (this.count < 10) {
+            this.count++;
           }
         },
-        decrement(){
-          if(this.count > 0) {
-        this.count-- ;
-      }
+        decrement() {
+          if (this.count > 0) {
+            this.count--;
+          }
         }
-      }).mount()
+      }).mount();
 
       new Vue({
-      el: '#users',
-      data: {
-        users: [
-          { name: 'John Smith',email: 'j.smith@test.com',number: "07700 000 000"}],
-      }
-     })
+        el: "#users",
+        data: {
+          users: [
+            {
+              name: "John Smith",
+              email: "j.smith@test.com",
+              number: "07700 000 000"
+            }
+          ]
+        }
+      });
     </script>
- 
   </head>
   <body>
     <header>
@@ -106,12 +110,14 @@
 
         <div v-scope>
           <div class="buttons">
-            <button v-if="count < 10"v-on:click.prevent="increment">Increase Number</button>
-            <button v-if="count > 0" v-on:click.prevent="decrement">Decrease Number</button>
+            <button v-if="count < 10" v-on:click.prevent="increment">
+              Increase Number
+            </button>
+            <button v-if="count > 0" v-on:click.prevent="decrement">
+              Decrease Number
+            </button>
           </div>
-          <p id="count"> You clicked the button: {{ count }} times.</p>
-          
-
+          <p id="count">You clicked the button: {{ count }} times.</p>
         </div>
       </article>
     </section>
@@ -135,57 +141,71 @@
       </p>
       <p id="Partnerships">
         <strong>Partnerships, Sponsorships and Enquires</strong>
-
-        <ul id="users">
-          <li v-for="user in users">
-            {{user.name}}
-            <li v-for="user in users">
-              {{user.email}}
-            </li>
-            <li v-for="user in users">
-              {{user.number}}
-            </li>
-          
-        </ul>
-     
       </p>
+
+      <ul id="users">
+        <li v-for="user in users">{{user.name}}</li>
+        <li v-for="user in users">{{user.email}}</li>
+        <li v-for="user in users">{{user.number}}</li>
+      </ul>
+      >
     </section>
     <section>
-      <div id="singleImages">
-        
-        <div id="herosImages">
-          <a href="https://www.regatta.com/mens"><img
-              src="images/heros/C2-Desktop.jpg"
-              alt="Man wearing outdoor clothing"
-              class="centered-c1"
-              width="500px" 
-              />
-            </a>
-              <a href="https://www.regatta.com/womens/"> <img
-            src="images/heros/C1-Desktop.jpg"
-            alt="Woman wearing outdoor clothing"
-            class="centered-c2"
-            width="500px"
-          />
-        </a>
+      <div class="ddd">
+        <img
+          src="images/heros/C2-Desktop.jpg"
+          alt="Man wearing outdoor clothing"
+          class="centered-c1"
+          width="500px"
+        />
+        <div class="forth-text">
+          <a href="https://www.regatta.com/mens"><button>Mens</button></a>
         </div>
-        <div id="singleImages">   
-         <a href="https://www.regatta.com/collections/holiday-shop/">  <img
-            src="images/heros/C3-Desktop.jpg"
-            alt="Four people fishing by the sea"
-            class="centered-c3"
-            width="500px"
-          />
-         </a>
-          <a href="https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/"> <img
-            src="images/heros/C4-Desktop.jpg"
-            alt="Two people wearing waterproof outdoor clothing"
-            class="centered-c4"
-            width="500px"
-          />  
-        </a>
-         </div>
+      </div>
+
+      <!--  -->
+
+      <div class="ccc">
+        <img
+          src="images/heros/C1-Desktop.jpg"
+          alt="Woman wearing outdoor clothing"
+          width="500px"
+        />
+        <div class="third-text">
+          <a href="https://www.regatta.com/womens/"><button>Womans</button></a>
         </div>
+      </div>
+
+      <!--  -->
+
+      <div class="bbb">
+        <img
+          src="images/heros/C3-Desktop.jpg"
+          alt="Four people fishing by the sea"
+          width="500px"
+        />
+        <div class="second-text">
+          <a href="https://www.regatta.com/collections/holiday-shop/"
+            ><button>Holiday shop</button></a
+          >
+        </div>
+      </div>
+
+      <!--  -->
+
+      <div class="aaa">
+        <img
+          src="images/heros/C4-Desktop.jpg"
+          alt="Two people wearing waterproof outdoor clothing"
+          width="500px"
+        />
+        <div class="first-txt">
+          <a
+            href="https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/"
+            ><button>Waterproof Jackets</button>
+          </a>
+        </div>
+      </div>
     </section>
 
     <footer>
