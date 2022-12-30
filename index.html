@@ -34,7 +34,16 @@
       }
         }
       }).mount()
+
+      new Vue({
+      el: '#users',
+      data: {
+        users: [
+          { name: 'John Smith',email: 'j.smith@test.com',number: "07700 000 000"}],
+      }
+     })
     </script>
+ 
   </head>
   <body>
     <header>
@@ -126,11 +135,19 @@
       </p>
       <p id="Partnerships">
         <strong>Partnerships, Sponsorships and Enquires</strong>
-        <ul>
-          <li>John Smith</li>
-          <li>07700 000 000</li>
-          <li><a href="mailto:j.smith@test.com"><u>j.smith@test.com</u></a></li>
+
+        <ul id="users">
+          <li v-for="user in users">
+            {{user.name}}
+            <li v-for="user in users">
+              {{user.email}}
+            </li>
+            <li v-for="user in users">
+              {{user.number}}
+            </li>
+          
         </ul>
+     
       </p>
     </section>
     <section>
