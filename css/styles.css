@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-weight: 700;
+}
+
 #logo {
   max-width: 240px;
   display: block;
@@ -12,6 +16,7 @@ body {
 }
 
 .banner {
+  display: inline-block;
   width: 100%;
   overflow: hidden;
   object-fit: cover;
@@ -19,11 +24,11 @@ body {
 }
 
 nav {
-  display: flex;
+  display: inline-block;
   background-color: rgb(251, 248, 248);
   width: 100%;
   margin-bottom: 4px;
-  justify-content: center;
+  text-align: center;
   padding: 5px;
   gap: 7px;
 }
@@ -41,12 +46,6 @@ nav a {
   color: white;
 }
 
-.container img {
-  width: 100%;
-  text-align: center;
-  margin: 20px;
-}
-
 .centered {
   position: absolute;
   top: 50%;
@@ -55,14 +54,14 @@ nav a {
 }
 
 .centered p {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 30px;
-  line-height: 1px;
+  line-height: 10px;
 }
 
 @media (max-width: 480px) {
-  .container {
-    margin-right: 25px;
+  .container img {
+    width: 100%;
   }
 
   .centered p {
@@ -81,23 +80,17 @@ nav a {
   #welcome,
   #Partnerships,
   #description {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 
-#description {
-  width: 1000px;
-  margin: 0 auto;
-  line-height: 20px;
-  font-size: 13px;
-}
-
+#description,
 #press-enquiry,
 ul {
   width: 1000px;
-  font-size: 13px;
-  line-height: 20px;
   margin: 0 auto;
+  line-height: 20px;
+  font-size: 13px;
 }
 
 #welcome,
@@ -109,10 +102,6 @@ ul {
 
 li a {
   color: blue;
-}
-
-footer p {
-  text-align: center;
 }
 
 a {
@@ -129,35 +118,18 @@ button {
 }
 
 #count,
-.buttons {
+.buttons,
+footer {
   text-align: center;
 }
-/* 1 */
+
 .position {
   position: relative;
 }
 
-.first-txt {
+.position a {
   position: absolute;
   left: 200px;
-  bottom: 50px;
-}
-/* 2 */
-.second-text {
-  position: absolute;
-  left: 200px;
-  bottom: 50px;
-}
-/* 3 */
-.third-text {
-  position: absolute;
-  left: 220px;
-  bottom: 50px;
-}
-/* 4 */
-.forth-text {
-  position: absolute;
-  left: 230px;
   bottom: 50px;
 }
 
@@ -169,10 +141,6 @@ button {
 }
 
 .container img {
-  width: 450px;
+  width: 500px;
   margin: 20px;
-}
-
-footer p {
-  text-align: center;
 }
