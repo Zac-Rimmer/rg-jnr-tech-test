@@ -49,6 +49,16 @@ The hover effects were added for improved user experience. (I also personally re
 
 ---
 
+# Bonus Tasks
+
+## One
+
+I used a VueJS v-for to place the contact details into the HTML. I consulted the VueJS documentation and YouTube tutorials to get an initial handle on VueJS as I have no prior experience with this. 
+
+---
+
+##
+
 # Additional Points
 
 ### Links

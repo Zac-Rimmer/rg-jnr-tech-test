@@ -10,6 +10,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script type="module">
+            const pressContactDetails = new Vue({
+                el: "#contacts",
+                data: {
+                    contacts: [
+                        {
+                            name: "John Smith",
+                            number: "07700 000 000",
+                            email: "j.smith@test.com"
+                        }
+                    ]
+                }
+            });
+        </script>
     </head>
     <body>
         <header>
@@ -68,34 +82,34 @@
                 <h3>Welcome to our Press Area</h3>
                 <p>If you have a press enquiry our PR team will be happy to help.</p>
                 <h3>Partnerships, Sponsorships and Enquiries</h3>
-                <ul>
-                    <li>John Smith</li>
-                    <li>07700 000 000</li>
-                    <li><a href="/">j.smith@test.com</a></li>
-                </ul>
+                <ul id="contacts">
+                    <li v-for="contact in contacts">{{ contact.name }}</li>
+                    <li v-for="contact in contacts">{{ contact.number }}</li>
+                    <li v-for="contact in contacts"><a href="/">{{ contact.email }}</a></li>
+                 </ul>
             </div>
             <div class="collections-block">
                 <div class="collections-block--one">
                     <a href="https://www.regatta.com/mens/">
-                        <img src="images/heros/C2-Mobile.jpg" alt="Collection Image" width="420" height="350">
+                        <img src="images/heros/C2-Mobile.jpg" alt="Mens Collection Image" width="420" height="350">
                         <span>Mens</span>
                     </a>
                 </div>
                 <div class="collections-block--two">
                     <a href="https://www.regatta.com/womens/">
-                        <img src="images/heros/C1-Mobile.jpg" alt="Collection Image" width="420" height="350">
+                        <img src="images/heros/C1-Mobile.jpg" alt="Womens Collection Image" width="420" height="350">
                         <span>Womens</span>
                     </a>
                 </div>
                 <div class="collections-block--three">
                     <a href="https://www.regatta.com/collections/holiday-shop/">
-                        <img src="images/heros/C3-Mobile.jpg" alt="Collection Image" width="420" height="350">
+                        <img src="images/heros/C3-Mobile.jpg" alt="Holiday Shop Collection Image" width="420" height="350">
                         <span>Holiday Shop</span>
                     </a>
                 </div>
                 <div class="collections-block--four">
                     <a href="https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/">
-                        <img src="images/heros/C4-Mobile.jpg" alt="Collection Image" width="420" height="350">
+                        <img src="images/heros/C4-Mobile.jpg" alt="Waterproof Jackets Collection Image" width="420" height="350">
                         <span>Waterproof Jackets</span>
                     </a>
                 </div>
