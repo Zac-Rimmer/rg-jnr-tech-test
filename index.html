@@ -10,20 +10,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-        <script type="module">
-            const pressContactDetails = new Vue({
-                el: "#contacts",
-                data: {
-                    contacts: [
-                        {
-                            name: "John Smith",
-                            number: "07700 000 000",
-                            email: "j.smith@test.com"
-                        }
-                    ]
-                }
-            });
-        </script>
     </head>
     <body>
         <header>
@@ -114,9 +100,30 @@
                     </a>
                 </div>
             </div>
+            <!-- Bonus Task Section -->
+            <div id="bonus-task">
+                <button class="decrease">Decrease Number</button>
+                <button class="increase">Increase Number</button>
+                <p class="count-text">You clicked the button: {{  }} times.</p>
+            </div>
         </section>
         <footer>
             <span>© The Regatta Group</span>
         </footer>
+        <script type="module">
+            // Contact details for Press section
+            const pressContactDetails = new Vue({
+                el: "#contacts",
+                data: {
+                    contacts: [
+                        {
+                            name: "John Smith",
+                            number: "07700 000 000",
+                            email: "j.smith@test.com"
+                        }
+                    ]
+                }
+            });
+        </script>
     </body>
 </html>

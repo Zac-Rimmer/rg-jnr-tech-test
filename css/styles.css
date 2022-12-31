@@ -121,6 +121,29 @@ nav li a:hover, nav li a:active {
     color: #d2d2d2;
 }
 
+/* Bonus Task */
+
+#bonus-task {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#bonus-task button {
+    background-color: black;
+    color: white;
+    margin: 0 5px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: 'Fira Sans';
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#bonus-task button:hover {
+    color: #d2d2d2;
+}
+
 /* Footer */
 
 footer {
