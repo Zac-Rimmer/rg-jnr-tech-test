@@ -60,13 +60,9 @@
     <nav>
       <a href="#">Home</a>| <a href="#">About</a> |<a href="#">Contact Us</a>
     </nav>
-    <article id="app">
-      <div id="container">
-        <img
-          src="images/banners/Main-Banner.jpeg"
-          alt="Main banner"
-          class="banner"
-        />
+    <article>
+      <div class="contain">
+        <img src="images/banners/Main-Banner.jpeg" alt="Main banner" />
         <div class="centered">
           <p>When our adventure began</p>
           <p>There were just 12 of us</p>
@@ -122,12 +118,8 @@
       </section>
 
       <section>
-        <div id="container">
-          <img
-            src="images/banners/Press-Banner.jpeg"
-            alt="Press banner"
-            class="banner"
-          />
+        <div class="contain">
+          <img src="images/banners/Press-Banner.jpeg" alt="Press banner" />
           <div class="centered">
             <p>Press</p>
           </div>
@@ -142,8 +134,10 @@
 
         <ul id="users">
           <li v-for="user in users">{{user.name}}</li>
-          <li v-for="user in users">{{user.email}}</li>
           <li v-for="user in users">{{user.number}}</li>
+          <li v-for="user in users">
+            <a href="mailto:">{{user.email}}</a>
+          </li>
         </ul>
       </section>
       <section>
