@@ -102,9 +102,9 @@
             </div>
             <!-- Bonus Task Section -->
             <div id="bonus-task">
-                <button class="decrease">Decrease Number</button>
-                <button class="increase">Increase Number</button>
-                <p class="count-text">You clicked the button: {{  }} times.</p>
+                <button class="decrement" v-if="number > 0" @click="decrement">Decrease Number</button>
+                <button class="increment" v-if="number < 10" @click="increment">Increase Number</button>
+                <p class="number-text">You clicked the button: {{ number }} times.</p>
             </div>
         </section>
         <footer>
@@ -122,6 +122,25 @@
                             email: "j.smith@test.com"
                         }
                     ]
+                }
+            });
+            // Bonus Task functions for incrementing and decrementing number based on button clicks
+            const bonusTask = new Vue({
+                el: "#bonus-task",
+                data: {
+                    number: 0,
+                },
+                methods: {
+                    increment: function() {
+                        if (this.number < 10) {
+                            this.number++;
+                        }
+                    },
+                    decrement: function() {
+                        if (this.number > 0) {
+                            this.number--;
+                        }
+                    }
                 }
             });
         </script>
