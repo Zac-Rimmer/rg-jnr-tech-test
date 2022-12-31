@@ -1,25 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>The Regatta Group Junior Front End Developer Tech Test</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link href="./css/styles.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    </head>
-    <body>
-        <header>
-            <img src="./images/Regatta-Group-Logo.png" alt="The Regatta Group" id="logo"/>
-        </header>
-        <section id="app">
-            <!-- Code Here -->
-        </section>
-        <footer>
-            <span>© The Regatta Group</span>
-        </footer>
-    </body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>The Regatta Group Junior Front End Developer Tech Test</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link href="./css/styles.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+	<header>
+		<img src="./images/Regatta-Group-Logo.png" alt="The Regatta Group" id="logo" />
+	</header>
+	<section id="app">
+		<!-- Code Here -->
+		<nav>
+			<ul class="nav-list">
+				<li>Home</li>
+				<li>About</li>
+				<li>Contact Us</li>
+			</ul>
+		</nav>
+
+		<!-- Hero Component -->
+		<div class="banner-img__container">
+			<img src="./images/banners/Main-Banner.jpeg" />
+			<p class="banner-img__text">
+				When our adventure began <br />
+				There were just 12 of us <br />
+				It was 1981
+			</p>
+		</div>
+
+		<header>
+			<h1>About Regatta</h1>
+		</header>
+
+		<article>
+			<h1>When our adventure began, there were just 12 of us. It was 1981.</h1>
+			<p>
+				Back then the outdoors was about intrepid explorers, but we just wanted to open our front door and have
+				fun. And we wanted everyone else out there with us too.
+				<br /><br />
+				So we made great products that people could afford, clothing to get them outside and enjoying the fresh
+				air without worrying what it would cost. That’s still what counts for us.
+				<br /><br />
+				And we’re still doing it. Still thinking of new ways to help people, still inspired by the great
+				outdoors and still hanging by the front door when you need us.
+				<br /><br />
+				And it’s still what counts for the ramblers, amblers, hikers and bikers. campers and gardeners and daily
+				commuters, dog walkers, show jumpers and multi-tasking mums, picnickers, backpackers, kids playing ball
+				and dads at the footie, urban roamers and beachcombers and puddle-loving children and everyone else
+				we’ve helped start their own adventure.
+				<br /><br />
+				There were 12 of us
+				<br /><br />
+				Now there are millions
+				<br /><br />
+				<b>For every adventure</b>
+			</p>
+		</article>
+
+		<!-- Hero Component -->
+		<div class="banner-img__container">
+			<img src="./images/banners/Press-Banner.jpeg" />
+			<p class="banner-img__text">
+				Press
+			</p>
+		</div>
+
+		<header>
+			<h1>Welcome to Our Press Area</h1>
+			<p>If you have a press enquiry our PR team will be happy to help.</p>
+		</header>
+
+		<section>
+			<h1>Partnerships, Sponsorships and Enquires</h1>
+			<ul>
+				<li>John Smith</li>
+				<li>07700 000 000</li>
+				<li>j.smith@test.com</li>
+			</ul>
+		</section>
+
+		<!-- Tile Cards -->
+		<div class="tile-grid">
+			<div>
+				<a href="">
+					<picture>
+						<source media="(min-width: 768px)" srcset="./images/heros/C2-desktop.jpg">
+						<source media="(max-width: 480px)" srcset="./images/heros/C2-mobile.jpg">
+						<img src="./images/heros/C1-mobile.jpg" alt="Tile Hero #1">
+					</picture>
+					<p class="tile-grid__badge">Mens</p>
+				</a>
+			</div>
+		</div>
+
+	</section>
+	<footer>
+		<span>© The Regatta Group</span>
+	</footer>
+</body>
+
 </html>
