@@ -60,7 +60,7 @@
     <nav>
       <a href="#">Home</a>| <a href="#">About</a> |<a href="#">Contact Us</a>
     </nav>
-    <section id="app">
+    <article id="app">
       <div id="container">
         <img
           src="images/banners/Main-Banner.jpeg"
@@ -74,7 +74,7 @@
         </div>
       </div>
 
-      <article id="description">
+      <section id="description">
         <h1>About Regatta</h1>
 
         <strong
@@ -119,85 +119,74 @@
           </div>
           <p id="count">You clicked the button: {{ count }} times.</p>
         </div>
-      </article>
-    </section>
-    <section>
-      <div id="container">
-        <img
-          src="images/banners/Press-Banner.jpeg"
-          alt="Press banner"
-          class="banner"
-        />
-        <div class="centered">
-          <p>Press</p>
-        </div>
-      </div>
-    </section>
-    <section id="press-area">
-      <p id="welcome"><strong>Welcome to Our Press Area</strong></p>
+      </section>
 
-      <p id="press-enquiry">
-        If you have a press enquiry our PR team will be happy to help.
-      </p>
-      <p id="Partnerships">
-        <strong>Partnerships, Sponsorships and Enquires</strong>
-      </p>
-
-      <ul id="users">
-        <li v-for="user in users">{{user.name}}</li>
-        <li v-for="user in users">{{user.email}}</li>
-        <li v-for="user in users">{{user.number}}</li>
-      </ul>
-    </section>
-    <section>
-      <div class="container">
-        <div class="position">
+      <section>
+        <div id="container">
           <img
-            src="images/heros/C2-Desktop.jpg"
-            alt="Man wearing regatta outdoor clothing"
+            src="images/banners/Press-Banner.jpeg"
+            alt="Press banner"
+            class="banner"
           />
-          <div class="forth-text">
-            <a href="https://www.regatta.com/mens"><button>Mens</button></a>
+          <div class="centered">
+            <p>Press</p>
           </div>
         </div>
+      </section>
+      <section id="press-area">
+        <p id="welcome">
+          <strong>Welcome to Our Press Area</strong><br /><br />
+          If you have a press enquiry our PR team will be happy to help.<br /><br />
+          <strong>Partnerships, Sponsorships and Enquires</strong>
+        </p>
 
-        <div class="position">
-          <img
-            src="images/heros/C1-Desktop.jpg"
-            alt="Woman wearing regatta outdoor clothing"
-            width="500px"
-          />
-          <div class="third-text">
+        <ul id="users">
+          <li v-for="user in users">{{user.name}}</li>
+          <li v-for="user in users">{{user.email}}</li>
+          <li v-for="user in users">{{user.number}}</li>
+        </ul>
+      </section>
+      <section>
+        <div class="container">
+          <div class="position">
+            <img
+              src="images/heros/C2-Desktop.jpg"
+              alt="Man wearing regatta outdoor clothing"
+            />
+            <a href="https://www.regatta.com/mens"><button>Mens</button></a>
+          </div>
+          <div class="position">
+            <img
+              src="images/heros/C1-Desktop.jpg"
+              alt="Woman wearing regatta outdoor clothing"
+              width="500px"
+            />
             <a href="https://www.regatta.com/womens/"
               ><button>Womans</button></a
             >
           </div>
-        </div>
-        <div class="position">
-          <img
-            src="images/heros/C3-Desktop.jpg"
-            alt="Four people fishing by the sea"
-          />
-          <div class="second-text">
+          <div class="position">
+            <img
+              src="images/heros/C3-Desktop.jpg"
+              alt="Four people fishing by the sea"
+            />
             <a href="https://www.regatta.com/collections/holiday-shop/"
               ><button>Holiday shop</button></a
             >
           </div>
-        </div>
-        <div class="position">
-          <img
-            src="images/heros/C4-Desktop.jpg"
-            alt="Two people wearing waterproof outdoor clothing"
-          />
-          <div class="first-txt">
+          <div class="position">
+            <img
+              src="images/heros/C4-Desktop.jpg"
+              alt="Two people wearing waterproof outdoor clothing"
+            />
             <a
               href="https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/"
               ><button>Waterproof Jackets</button>
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </article>
     <footer>
       <p id="footer-logo">© The Regatta Group</p>
     </footer>
