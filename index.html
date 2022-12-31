@@ -68,32 +68,32 @@
                 <h3>Welcome to our Press Area</h3>
                 <p>If you have a press enquiry our PR team will be happy to help.</p>
                 <h3>Partnerships, Sponsorships and Enquiries</h3>
-                <ul id="contacts">
+                <ul id="press-text_contacts">
                     <li v-for="contact in contacts">{{ contact.name }}</li>
                     <li v-for="contact in contacts">{{ contact.number }}</li>
                     <li v-for="contact in contacts"><a href="/">{{ contact.email }}</a></li>
                  </ul>
             </div>
             <div class="collections-block">
-                <div class="collections-block--one">
+                <div class="collections-block_one">
                     <a href="https://www.regatta.com/mens/">
                         <img src="images/heros/C2-Mobile.jpg" alt="Mens Collection Image" width="420" height="350">
                         <span>Mens</span>
                     </a>
                 </div>
-                <div class="collections-block--two">
+                <div class="collections-block_two">
                     <a href="https://www.regatta.com/womens/">
                         <img src="images/heros/C1-Mobile.jpg" alt="Womens Collection Image" width="420" height="350">
                         <span>Womens</span>
                     </a>
                 </div>
-                <div class="collections-block--three">
+                <div class="collections-block_three">
                     <a href="https://www.regatta.com/collections/holiday-shop/">
                         <img src="images/heros/C3-Mobile.jpg" alt="Holiday Shop Collection Image" width="420" height="350">
                         <span>Holiday Shop</span>
                     </a>
                 </div>
-                <div class="collections-block--four">
+                <div class="collections-block_four">
                     <a href="https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/">
                         <img src="images/heros/C4-Mobile.jpg" alt="Waterproof Jackets Collection Image" width="420" height="350">
                         <span>Waterproof Jackets</span>
@@ -102,9 +102,9 @@
             </div>
             <!-- Bonus Task Section -->
             <div id="bonus-task">
-                <button class="decrement" v-if="number > 0" @click="decrement">Decrease Number</button>
-                <button class="increment" v-if="number < 10" @click="increment">Increase Number</button>
-                <p class="number-text">You clicked the button: {{ number }} times.</p>
+                <button class="bonus-task_decrement" v-if="number > 0" @click="decrement">Decrease Number</button>
+                <button class="bonus-task_increment" v-if="number < 10" @click="increment">Increase Number</button>
+                <p class="bonus-task_number-text">You clicked the button: {{ number }} times.</p>
             </div>
         </section>
         <footer>
