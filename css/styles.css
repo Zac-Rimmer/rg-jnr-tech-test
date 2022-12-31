@@ -42,12 +42,12 @@ nav li a:hover, nav li a:active {
 /* Main Banner/Press Banner */
 
 .main-banner {
-    background-image: url("/images/banners/Main-Banner.jpeg");
+    background-image: url("../images/banners/Main-Banner.jpeg");
     margin-left: -25px;
 }
 
 .press-banner {
-    background-image: url("/images/banners/Press-Banner.jpeg");
+    background-image: url("../images/banners/Press-Banner.jpeg");
     margin-left: -37px;
 }
 
