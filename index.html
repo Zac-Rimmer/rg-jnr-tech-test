@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet">
 	<link href="./css/styles.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
 </head>
 
 <body>
@@ -28,7 +28,6 @@
 			</ul>
 		</nav>
 
-		<!-- Hero Component -->
 		<div class="banner-img__container">
 			<img src="./images/banners/Main-Banner.jpeg" />
 			<p class="banner-img__text">
@@ -38,11 +37,11 @@
 			</p>
 		</div>
 
-		<header>
+		<header class="wrapped">
 			<h1>About Regatta</h1>
 		</header>
 
-		<article>
+		<article class="wrapped">
 			<h1>When our adventure began, there were just 12 of us. It was 1981.</h1>
 			<p>
 				Back then the outdoors was about intrepid explorers, but we just wanted to open our front door and have
@@ -75,12 +74,12 @@
 			</p>
 		</div>
 
-		<header>
+		<header class="wrapped">
 			<h1>Welcome to Our Press Area</h1>
 			<p>If you have a press enquiry our PR team will be happy to help.</p>
 		</header>
 
-		<section>
+		<section class="wrapped">
 			<h1>Partnerships, Sponsorships and Enquires</h1>
 			<ul>
 				<li>John Smith</li>
@@ -91,7 +90,27 @@
 
 		<!-- Tile Cards -->
 		<div class="tile-grid">
-			<div>
+			<div class="grid-item">
+				<a href="">
+					<picture>
+						<source media="(min-width: 768px)" srcset="./images/heros/C2-desktop.jpg">
+						<source media="(max-width: 480px)" srcset="./images/heros/C2-mobile.jpg">
+						<img src="./images/heros/C1-mobile.jpg" alt="Tile Hero #1">
+					</picture>
+					<p class="tile-grid__badge">Mens</p>
+				</a>
+			</div>
+			<div class="grid-item">
+				<a href="">
+					<picture>
+						<source media="(min-width: 768px)" srcset="./images/heros/C2-desktop.jpg">
+						<source media="(max-width: 480px)" srcset="./images/heros/C2-mobile.jpg">
+						<img src="./images/heros/C1-mobile.jpg" alt="Tile Hero #1">
+					</picture>
+					<p class="tile-grid__badge">Mens</p>
+				</a>
+			</div>
+			<div class="grid-item">
 				<a href="">
 					<picture>
 						<source media="(min-width: 768px)" srcset="./images/heros/C2-desktop.jpg">
