@@ -41,6 +41,13 @@ nav a {
   color: white;
 }
 
+.container img {
+  width: 100%;
+  /* width: calc(100% - (30px * 2)); */
+  text-align: center;
+  margin: 20px;
+}
+
 .centered {
   position: absolute;
   top: 50%;
@@ -55,11 +62,8 @@ nav a {
 }
 
 @media (max-width: 480px) {
-  #singleImages {
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    margin-top: 15px;
+  .container {
+    margin-right: 25px;
   }
 
   .centered p {
@@ -72,15 +76,13 @@ nav a {
     height: auto;
     width: 100%;
   }
-  #description {
-    max-width: 430px;
-  }
 
   #press-enquiry,
   ul,
   #welcome,
-  #Partnerships {
-    max-width: 430px;
+  #Partnerships,
+  #description {
+    max-width: 90%;
   }
 }
 
@@ -127,65 +129,69 @@ button {
   margin-right: 7px;
 }
 
+#count,
 .buttons {
-  text-align: center;
-}
-
-#count {
   text-align: center;
 }
 
 /* 1 */
 
 .aaa {
-  margin: 3%;
   position: relative;
 }
 
 .first-txt {
   position: absolute;
-  left: 220px;
+  left: 200px;
   bottom: 50px;
 }
 
 /* 2 */
 
 .bbb {
-  margin: 3%;
   position: relative;
 }
 
 .second-text {
   position: absolute;
-  left: 220px;
+  left: 200px;
   bottom: 50px;
 }
 
 /* 3 */
 .ccc {
-  margin: 3%;
   position: relative;
 }
 
 .third-text {
   position: absolute;
   left: 220px;
-
   bottom: 50px;
 }
 
 /* 4 */
 .ddd {
-  margin: 3%;
   position: relative;
 }
 
 .forth-text {
   position: absolute;
-  left: 220px;
+  left: 230px;
   bottom: 50px;
 }
 
-.group {
+.container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3%;
+}
+
+.container img {
+  width: 450px;
+  margin: 20px;
+}
+
+footer p {
+  text-align: center;
 }
