@@ -37,11 +37,11 @@
 			</p>
 		</div>
 
-		<header class="wrapped">
+		<header>
 			<h1>About Regatta</h1>
 		</header>
 
-		<article class="wrapped">
+		<article>
 			<h1>When our adventure began, there were just 12 of us. It was 1981.</h1>
 			<p>
 				Back then the outdoors was about intrepid explorers, but we just wanted to open our front door and have
@@ -74,12 +74,12 @@
 			</p>
 		</div>
 
-		<header class="wrapped">
+		<header>
 			<h1>Welcome to Our Press Area</h1>
 			<p>If you have a press enquiry our PR team will be happy to help.</p>
 		</header>
 
-		<section class="wrapped">
+		<section>
 			<h1>Partnerships, Sponsorships and Enquires</h1>
 			<ul>
 				<li>John Smith</li>
@@ -89,35 +89,15 @@
 		</section>
 
 		<!-- Tile Cards -->
-		<div class="tile-grid">
-			<div class="grid-item">
-				<a href="">
+		<div class="tile-grid ">
+			<div class="tile-grid__item" v-for="(tile, index) in productTileInfo" :key="index">
+				<a :href="tile.url">
 					<picture>
-						<source media="(min-width: 768px)" srcset="./images/heros/C2-desktop.jpg">
-						<source media="(max-width: 480px)" srcset="./images/heros/C2-mobile.jpg">
-						<img src="./images/heros/C1-mobile.jpg" alt="Tile Hero #1">
+						<source media="(min-width: 768px)" :srcset="`./images/heros/${tile.identifier}-Desktop.jpg`">
+						<source media="(min-width: 480px)" :srcset="`./images/heros/${tile.identifier}-Mobile.jpg`">
+						<img :src="`./images/heros/${tile.identifier}-mobile.jpg`" :alt="tile.title">
 					</picture>
-					<p class="tile-grid__badge">Mens</p>
-				</a>
-			</div>
-			<div class="grid-item">
-				<a href="">
-					<picture>
-						<source media="(min-width: 768px)" srcset="./images/heros/C2-desktop.jpg">
-						<source media="(max-width: 480px)" srcset="./images/heros/C2-mobile.jpg">
-						<img src="./images/heros/C1-mobile.jpg" alt="Tile Hero #1">
-					</picture>
-					<p class="tile-grid__badge">Mens</p>
-				</a>
-			</div>
-			<div class="grid-item">
-				<a href="">
-					<picture>
-						<source media="(min-width: 768px)" srcset="./images/heros/C2-desktop.jpg">
-						<source media="(max-width: 480px)" srcset="./images/heros/C2-mobile.jpg">
-						<img src="./images/heros/C1-mobile.jpg" alt="Tile Hero #1">
-					</picture>
-					<p class="tile-grid__badge">Mens</p>
+					<p class="tile-grid__badge">{{ tile.title }}</p>
 				</a>
 			</div>
 		</div>
@@ -127,5 +107,24 @@
 		<span>© The Regatta Group</span>
 	</footer>
 </body>
+
+<script type="module">
+	import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+
+	const app = createApp({
+		data() {
+			return {
+				productTileInfo: [
+					{ title: 'Mens', url: 'https://www.regatta.com/mens/', identifier: 'C2' },
+					{ title: 'Womens', url: 'https://www.regatta.com/womens/', identifier: 'C1' },
+					{ title: 'Holiday Shop', url: 'https://www.regatta.com/collections/holiday-shop/', identifier: 'C3' },
+					{ title: 'Waterproof Jackets', url: 'https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/', identifier: 'C4' },
+				],
+			}
+		},
+	});
+
+	app.mount('#app');
+</script>
 
 </html>
