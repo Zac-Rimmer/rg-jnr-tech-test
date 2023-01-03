@@ -82,9 +82,14 @@
 		<section>
 			<h1>Partnerships, Sponsorships and Enquires</h1>
 			<ul>
-				<li>John Smith</li>
-				<li>07700 000 000</li>
-				<li>j.smith@test.com</li>
+				<li v-for="item in pressContactInfo">
+					<component 
+						:is="item.element" 
+						:href="item.element === 'a' && `mailto:${item.data}`"
+					>
+						{{ item.data }}
+					</component>
+				</li>
 			</ul>
 		</section>
 
@@ -114,6 +119,11 @@
 	const app = createApp({
 		data() {
 			return {
+				pressContactInfo: [
+					{ data: 'John Smith', element: 'span' },
+					{ data: '07700 000 000', element: 'span' },
+					{ data: 'j.smith@test.com', element: 'a' }
+				],
 				productTileInfo: [
 					{ title: 'Mens', url: 'https://www.regatta.com/mens/', identifier: 'C2' },
 					{ title: 'Womens', url: 'https://www.regatta.com/womens/', identifier: 'C1' },
