@@ -12,7 +12,7 @@ body {
 }
 
 #app > *:not(nav, .banner-img__container)  {
-	width: 85vw;
+	width: 70vw;
 	margin: 0 auto;
 }
 
@@ -64,26 +64,20 @@ nav {
 
 /*  Tile Grid  */
 .tile-grid {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	
 	gap: 15px;
 	padding: 1rem 0;
+	
 }
 
 .tile-grid__item {
 	position: relative;
-	width: min-content;
-	height: min-content;
-
-	margin: 0 auto;
-	padding: 0;
 }
 
 .tile-grid__item img {
-	width: 800px;
+	max-width: 100%;
 }
 
 .tile-grid__badge {
@@ -113,10 +107,20 @@ footer {
 }
 
 @media (max-width: 1368px) {
+	.tile-grid {
+		grid-template-columns: 1fr 1fr;
+	}
 	.tile-grid__item img {
-		width: 520px;
+		width: max-content;
 	}
 }
+
+@media (max-width: 1100px) {
+	.tile-grid {
+		width: 100% !important;
+	}
+}
+
 @media (max-width: 768px) {
 	.banner-img__text {
 		width: 90%;
@@ -125,5 +129,8 @@ footer {
 	.tile-grid__item img {
 		width: 100vw;
 		height: auto;
+	}
+	.tile-grid {
+		grid-template-columns: 1fr;
 	}
 }
