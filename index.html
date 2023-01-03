@@ -66,6 +66,25 @@
 			</p>
 		</article>
 
+		<section class="counter">
+			<button 
+				v-if="counter > 0"
+				@click="counter--"
+				class="button"
+			>
+				Decrease Number
+			</button>
+			<button 
+				v-if="counter < 10"
+				@click="counter++"
+				class="button"
+			>
+				Increase Number
+			</button>
+
+			<p>You clicked the button: {{ counter }} times. </p>
+		</section>
+
 		<!-- Hero Component -->
 		<div class="banner-img__container">
 			<img src="./images/banners/Press-Banner.jpeg" />
@@ -102,7 +121,7 @@
 						<source media="(min-width: 480px)" :srcset="`./images/heros/${tile.identifier}-Mobile.jpg`">
 						<img :src="`./images/heros/${tile.identifier}-mobile.jpg`" :alt="tile.title">
 					</picture>
-					<p class="tile-grid__badge">{{ tile.title }}</p>
+					<p class="tile-grid__badge button">{{ tile.title }}</p>
 				</a>
 			</div>
 		</div>
@@ -119,6 +138,7 @@
 	const app = createApp({
 		data() {
 			return {
+				counter: 0,
 				pressContactInfo: [
 					{ data: 'John Smith', element: 'span' },
 					{ data: '07700 000 000', element: 'span' },
