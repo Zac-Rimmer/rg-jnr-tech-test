@@ -48,6 +48,7 @@ p {
     color: var(--primary-color);
     text-decoration: unset;
     padding: 0 15px;
+    text-transform: capitalize;
 }
 
 .app-navigation li:not(:last-child) a  {
@@ -152,6 +153,7 @@ p {
     color: var(--secondary-color);
     padding: 5px 15px;
     border-radius: 3px;
+    text-transform: capitalize;
 }
 
 .contactus .text-container li {
@@ -196,6 +198,36 @@ p {
     .contactus .hero-grid .hero.jackets {
         background-image: url(../images/heros/C4-Desktop.jpg);
     }
+}
+
+
+/* ------ COUNT SECTION ------ */
+
+.count {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.count__buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.count__buttons button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-transform: capitalize;
 }
 
 

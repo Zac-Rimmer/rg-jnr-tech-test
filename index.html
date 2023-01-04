@@ -27,7 +27,7 @@
                 <ul>
                     <li><a href="#logo">Home</a></li>
                     <li><a href="#aboutus">About</a></li>
-                    <li><a href="#contactus">Contact Us</a></li>
+                    <li><a href="#contactus">Contact us</a></li>
                 </ul>
             </nav>
             <section id="aboutus" class="aboutus">
@@ -89,18 +89,36 @@
                     </div>
                 </div>
             </section>
+            <section class="count">
+                <div class="count__buttons">
+                    <button @click="decrement">Decrease number</button>
+                    <button @click="increment">Increase number</button>
+                </div>
+                {{ message1 }} {{ count }} {{ message2 }}
+            </section>
 
             <script type="module">
                 import { createApp } from 'vue'
               
                 createApp({
-                  data() {
-                    return {
-                      contactDetails: [
-                        {name: "John Smith", telephone: "07700 000 000", email: "j.smith@test.com"}
-                      ]
+                    data() {
+                        return {
+                            message1: 'You clicked the button:',
+                            message2: 'times.',
+                            contactDetails: [
+                                {name: "John Smith", telephone: "07700 000 000", email: "j.smith@test.com"}
+                            ],
+                            count: 0
+                        }
+                    },
+                    methods: {
+                        increment() {
+                            this.count++;
+                        },
+                        decrement() {
+                            this.count--;
+                        }, 
                     }
-                  }
                 }).mount('#app')
               </script>
         </section>
