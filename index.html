@@ -10,23 +10,101 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script type="importmap">
+            {
+              "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+              }
+            }
+        </script>
     </head>
     <body>
         <header>
             <img src="./images/Regatta-Group-Logo.png" alt="The Regatta Group" id="logo"/>
         </header>
         <section id="app">
-            <nav>
+            <nav class="app-navigation">
                 <ul>
                     <li><a href="#logo">Home</a></li>
                     <li><a href="#aboutus">About</a></li>
                     <li><a href="#contactus">Contact Us</a></li>
                 </ul>
             </nav>
-            <section id="aboutus"></section>
-            <section id="contactus"></section>
+            <section id="aboutus" class="aboutus">
+                <div class="section-banner">
+                    <div class="section-banner__title">
+                        <span>When our adventure began</span>
+                        <span>There were just 12 of us</span>
+                        <span>It was 1981</span>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <h2>About Regatta</h2>
+                    <p class="bold">When our adventure began, there were just 12 of us. It was 1981.</p>
+                    <p>Back then the outdoors was about intrepid explorers, but we just wanted to open our front door and have fun. And we wanted everyone else out there with us too.</p>
+                    <p>So we made great products that people could afford, clothing to get them outside and enjoying the fresh air without worrying what it would cost. That’s still what counts for us.</p>
+                    <p>And we’re still doing it. Still thinking of new ways to help people, still inspired by the great outdoors and still hanging by the front door when you need us.</p>
+                    <p>And it’s still what counts for the ramblers, amblers, hikers and bikers. campers and gardeners and daily commuters, dog walkers, show jumpers and multi-tasking mums, picnickers, backpackers, kids playing ball and dads at the footie, urban roamers and beachcombers and puddle-loving children and everyone else we’ve helped start their own adventure.</p>
+                    <p>There were 12 of us</p>
+                    <p>Now there are millions</p>
+                    <p class="bold">For every adventure</p>
+                </div>
+            </section>
+            <section id="contactus" class="contactus">
+                <div class="section-banner">
+                    <div class="section-banner__title">
+                        <span>Press</span>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <h2>Welcome to Our Press Area</h2>
+                    <p>If you have a press enquiry our PR team will be happy to help.</p>
+                    <h3>Partnerships, Sponsorships and Enquires</h3>
+                    <ul>
+                        <li v-for="contact in contactDetails">{{ contact.name }}</li>
+                        <li v-for="contact in contactDetails">{{ contact.telephone }}</li>
+                        <li v-for="contact in contactDetails"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+                    </ul>
+                </div>
+                <div class="hero-grid">
+                    <div class="hero mens">
+                        <div class="hero__title">
+                            <span>Mens</span>
+                        </div>
+                    </div>
+                    <div class="hero womens">
+                        <div class="hero__title">
+                            <span>Womens</span>
+                        </div>
+                    </div>
+                    <div class="hero holiday">
+                        <div class="hero__title">
+                            <span>Holiday shop</span>
+                        </div>
+                    </div>
+                    <div class="hero jackets">
+                        <div class="hero__title">
+                            <span>Waterproof jackets</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script type="module">
+                import { createApp } from 'vue'
+              
+                createApp({
+                  data() {
+                    return {
+                      contactDetails: [
+                        {name: "John Smith", telephone: "07700 000 000", email: "j.smith@test.com"}
+                      ]
+                    }
+                  }
+                }).mount('#app')
+              </script>
         </section>
-        <footer>
+        <footer class="app-footer">
             <span>© The Regatta Group</span>
         </footer>
     </body>

@@ -9,3 +9,200 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+p {
+    line-height: 25px;
+}
+
+
+/* ------ VARIABLE COLORS ------ */
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #FFFFFF;
+    --bg-color: #F4F4F4;
+}
+
+
+/* ------ APP NAVIGATION ------ */
+
+.app-navigation {
+    background-color: var(--bg-color);
+}
+
+.app-navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    height: 50px;
+}
+
+.app-navigation li {
+    display: flex;
+    align-items: center;
+}
+
+.app-navigation li a {
+    color: var(--primary-color);
+    text-decoration: unset;
+    padding: 0 15px;
+}
+
+.app-navigation li:not(:last-child) a  {
+    border-right: 1px solid;
+}
+
+.app-navigation li a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------ SECTION BANNER ------ */
+
+.section-banner {
+    display: flex;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-banner .section-banner__title {
+    display: flex;
+    flex-direction: column;    
+    font-size: 27px;
+    color: var(--secondary-color);
+}
+
+.section-banner .section-banner__title span {
+    text-align: center;
+}
+
+
+/* ------ SECTION TEXT CONTAINER ------ */
+
+.text-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-container .bold {
+    font-weight: 600;
+}
+
+
+/* ------ ABOUT US ------ */
+
+.aboutus .section-banner {
+    background-image: url(../images/banners/Main-Banner.jpeg);
+}
+
+@media (max-width: 380px) {
+    .aboutus .section-banner__title span {  
+        font-size: 20px;
+    }
+}
+
+
+/* ------ CONTACT US / PRESS ------ */
+
+.contactus .section-banner {
+    background-image: url(../images/banners/Press-Banner.jpeg);
+}
+
+.contactus .hero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.contactus .hero-grid .hero {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+@media (min-width: 550px) {
+    .contactus .hero-grid .hero {  
+        width: 48%;
+        aspect-ratio: 1/1;
+    }
+}
+
+.contactus .hero-grid .hero .hero__title {
+    position: absolute;
+    bottom: 25px;
+}
+
+.contactus .hero-grid .hero .hero__title span {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+.contactus .text-container li {
+    padding-bottom: 5px;
+}
+
+.contactus .hero-grid .hero.mens {
+    background-image: url(../images/heros/C1-Mobile.jpg);
+}
+
+@media (min-width: 550px) {
+    .contactus .hero-grid .hero.mens {
+        background-image: url(../images/heros/C1-Desktop.jpg);
+    }
+}
+
+.contactus .hero-grid .hero.womens {
+    background-image: url(../images/heros/C2-Mobile.jpg);
+}
+
+@media (min-width: 550px) {
+    .contactus .hero-grid .hero.womens {
+        background-image: url(../images/heros/C2-Desktop.jpg);
+    }
+}
+
+.contactus .hero-grid .hero.holiday {
+    background-image: url(../images/heros/C3-Mobile.jpg);
+}
+
+@media (min-width: 550px) {
+    .contactus .hero-grid .hero.holiday {
+        background-image: url(../images/heros/C3-Desktop.jpg);
+    }
+}
+
+.contactus .hero-grid .hero.jackets {
+    background-image: url(../images/heros/C4-Mobile.jpg);
+}
+
+@media (min-width: 550px) {
+    .contactus .hero-grid .hero.jackets {
+        background-image: url(../images/heros/C4-Desktop.jpg);
+    }
+}
+
+
+/* ------ FOOTER ------ */
+
+footer.app-footer {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 20px 0;
+}
