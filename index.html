@@ -123,9 +123,9 @@
                 </div>
             </ul>
             <div id="counter">
-                
-                <button type="button" v-on:click="decrease">Decrease Number</button> 
-                <button type="button" v-on:click="increase">Increase Number</button> 
+
+                   <button v-if="counter > 0" type="button" v-on:click="decrease">Decrease Number</button> 
+                <button v-if="10 > counter" type="button" v-on:click="increase">Increase Number</button> 
                 <h3>You clicked the button: {{ counter }} times</h3>
               </div>
               <script>
