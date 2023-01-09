@@ -9,3 +9,29 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+/* Banner */
+.main-banner {
+    display: flex;
+    background-image: url("/images/banners/Main-Banner.jpeg");
+    align-items: center;
+    height: 50vh;
+    justify-content: center;
+}
+
+.main-banner-text {
+    color: white;
+    text-align: center;
+}
+
+/* About Text */
+.about-text-container{
+    display: flex;
+    justify-content: center;
+}
+
+.about-text-inner{
+    width: 85%;
+}
+
+/* Press Banner */
