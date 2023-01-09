@@ -122,10 +122,37 @@
                     
                 </div>
             </ul>
+            <div id="counter">
+                
+                <button type="button" v-on:click="decrease">Decrease Number</button> 
+                <button type="button" v-on:click="increase">Increase Number</button> 
+                <h3>You clicked the button: {{ counter }} times</h3>
+              </div>
+              <script>
 
+                var vueApp = new Vue({
+                      el: "#counter",
+                      data: {
+                        counter: 0,
+                      },
+                      methods: {
+                        increase: function() {
+                          this.counter++;
+                        },
+                        decrease:  function() {
+                          this.counter--;
+                        },
+                        reset: function() {
+                          this.counter = 0;
+                        }
+                      },
+                    })
+            </script>  
+              
         </section>
         <footer>
             <span>© The Regatta Group</span>
         </footer>
     </body>
+
 </html>
