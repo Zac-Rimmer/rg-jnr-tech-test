@@ -4,6 +4,10 @@ body {
     margin: 0;
 }
 
+html * {
+    font-family: 'Fira Sans', sans-serif;
+}
+
 #logo {
     max-width: 250px;
     display: block;
@@ -14,14 +18,45 @@ body {
 .main-banner {
     display: flex;
     background-image: url("/images/banners/Main-Banner.jpeg");
+    background-position: center center;
     align-items: center;
-    height: 50vh;
+    height: 270px;
     justify-content: center;
+    background-size: cover;
 }
 
 .main-banner-text {
     color: white;
     text-align: center;
+    font-size: 1.5rem;
+}
+
+/* nav bar */
+nav {
+    background-color: lightgray;
+    width: 100vw;
+    height: 50px;
+    margin: 10px 0 10px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li + li:before{
+    content: " | ";
+    padding: 0 10px;
+}
+
+nav ul {
+    margin: 0;
 }
 
 /* About Text */
@@ -31,7 +66,103 @@ body {
 }
 
 .about-text-inner{
-    width: 85%;
+    width: 70%;
 }
 
 /* Press Banner */
+.press-banner{
+    display: flex;
+    background-image: url("/images/banners/Press-Banner.jpeg");
+    background-position: center center;
+    align-items: center;
+    height: 270px;
+    justify-content: center;
+    background-size: cover;
+}
+
+.press-banner h3{
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* press area */
+.press-area{
+    display: flex;
+    justify-content: center;
+}
+
+.press-area-inner{
+    width: 70%;
+}
+
+.press-list li{
+    list-style: none;
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* collection image grid */
+
+.item{
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.squaregrid{
+  --content-width: 70vw;
+  --gutter: 15px;
+  --columns: 1;
+  --row-size: calc(
+    ( var(--content-width) - (var(--gutter) * (var(--columns) - 1))
+    ) / var(--columns)
+  );
+  
+  display: grid;
+  width: 100%;
+  max-width: var(--content-width);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-auto-rows: var(--row-size);
+  grid-column-gap: var(--gutter);
+  grid-row-gap: var(--gutter);
+}
+
+@media (min-width: 1200px){
+  .squaregrid{
+    --columns: 2;
+  }
+}
+
+.category-button{
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    background-color: black;
+    border: none;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+@media (min-width: 500px){
+    .collection-images {
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* mobile styles */
+
+@media (max-width: 400px){
+    .item{
+        width: 100vw;
+    }
+  }

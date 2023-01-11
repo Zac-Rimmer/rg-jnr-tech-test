@@ -17,6 +17,13 @@
         </header>
         <section id="app">
             <!-- Code Here -->
+            <nav class="nav-bar">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact Us</li>
+                </ul>
+            </nav>
             <div class="main-banner">
                 <div>
                     <p class="main-banner-text">When our adventure began <br>
@@ -29,10 +36,13 @@
                 <div class="about-text-inner">
                     <h2>About Regatta</h2>
                     <p><strong>When our adventure began, there were just 12 of us. It was 1981.</strong></p>
-                    <p>Back then the outdoors was about intrepid explorers, but we just wanted to open our front door and have fun. And we wanted everyone else out there with us too. So we made great products that people could afford, clothing to get them outside and enjoying the fresh air without worrying what it would cost. That’s still what counts for us. And we’re still doing it. Still thinking of new ways to help people, still inspired by the great outdoors and still hanging by the front door when you need us. And it’s still what counts for the ramblers, amblers, hikers and bikers. campers and gardeners and daily commuters, dog walkers, show jumpers and multi-tasking mums, picnickers, backpackers, kids playing ball and dads at the footie, urban roamers and beachcombers and puddle-loving children and everyone else we’ve helped start their own adventure.</p>
+                    <p>Back then the outdoors was about intrepid explorers, but we just wanted to open our front door and have fun. And we wanted everyone else out there with us too.</p>
+                    <p>So we made great products that people could afford, clothing to get them outside and enjoying the fresh air without worrying what it would cost. That’s still what counts for us.</p>
+                    <p>And we’re still doing it. Still thinking of new ways to help people, still inspired by the great outdoors and still hanging by the front door when you need us.</p>
+                    <p>And it’s still what counts for the ramblers, amblers, hikers and bikers. campers and gardeners and daily commuters, dog walkers, show jumpers and multi-tasking mums, picnickers, backpackers, kids playing ball and dads at the footie, urban roamers and beachcombers and puddle-loving children and everyone else we’ve helped start their own adventure.</p>
                     <p>There were 12 of us</p>
                     <p>Now there are millions</p>
-                    <p>For every adventure</p>
+                    <p><strong>For every adventure</strong></p>
                 </div>
             </div>
             <div class="press-banner">
@@ -40,9 +50,49 @@
                     <h3>Press</h3>
                 </div>
             </div>
+            <div class="press-area">
+                <div class="press-area-inner">
+                    <h2>Welcome to Our Press Area</h2>
+                    <p>If you have a press enquiry our PR team will be happy to help.</p>
+                    <h3>Partnerships, Sponsorships and Enquires</h3>
+                    <ul class="press-list">
+                        <li v-for="item in pressDetails">
+                            <a v-if="item.link" href="{{ item.link }}">{{ item.data }}</a>
+                            <a v-else="item.link">{{ item.data }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="collection-images">
+                <div class="squaregrid">
+                    <!-- <div v-for="item in URLlinks" class="item" style="background-image: url{{item.image}})">
+                        <a href="{{item.URL}}"><button class="category-button">{{item.category}}</button></a>
+                    </div> -->
+                    <div class="item" style="background-image: url('./images/heros/C2-Desktop.jpg')">
+                        <a href="https://www.regatta.com/mens/"><button class="category-button">Mens</button></a>
+                    </div>
+                    <div class="item" style="background-image: url('./images/heros/C1-Desktop.jpg')">
+                        <a href="https://www.regatta.com/womens/"><button class="category-button">Womens</button></a>
+                    </div>
+                    <div class="item" style="background-image: url('./images/heros/C3-Desktop.jpg')">
+                        <a href="https://www.regatta.com/collections/holiday-shop/"><button class="category-button">Holiday Shop</button></a>
+                    </div>
+                    <div class="item" style="background-image: url('./images/heros/C4-Desktop.jpg')">
+                        <a href="https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/"><button class="category-button">Waterproof Jackets</button></a>
+                    </div>
+                </div>
+            </div>
         </section>
         <footer>
             <span>© The Regatta Group</span>
         </footer>
+
+        <script>
+            new Vue({
+                el: '#app',
+                data: {pressDetails: [{ data: 'John Smith' }, { data: '07700 000 000' }, { data: 'j.smith@test.com', link: 'j.smith@test.com'}]},
+                // collectionLinks: {URLlinks: [{ URL: 'https://www.regatta.com/mens', category: 'Mens', image: './images/heros/C2-Desktop.jpg' }, { URL: 'https://www.regatta.com/womens/', category: 'Womens', image: './images/heros/C1-Desktop.jpg' }, { URL: 'https://www.regatta.com/collections/holiday-shop/', category: 'Holiday Shop', image: './images/heros/C3-Desktop.jpg' }, {URL: 'https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/', category: 'Waterproof Jackets', image: './images/heros/C4-Desktop.jpg'}]}
+            })  
+        </script>
     </body>
 </html>
