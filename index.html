@@ -90,8 +90,12 @@
         <script>
             new Vue({
                 el: '#app',
-                data: {pressDetails: [{ data: 'John Smith' }, { data: '07700 000 000' }, { data: 'j.smith@test.com', link: 'j.smith@test.com'}]},
-                // collectionLinks: {URLlinks: [{ URL: 'https://www.regatta.com/mens', category: 'Mens', image: './images/heros/C2-Desktop.jpg' }, { URL: 'https://www.regatta.com/womens/', category: 'Womens', image: './images/heros/C1-Desktop.jpg' }, { URL: 'https://www.regatta.com/collections/holiday-shop/', category: 'Holiday Shop', image: './images/heros/C3-Desktop.jpg' }, {URL: 'https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/', category: 'Waterproof Jackets', image: './images/heros/C4-Desktop.jpg'}]}
+                data() {
+                    return {
+                        pressDetails: [{ data: 'John Smith' }, { data: '07700 000 000' }, { data: 'j.smith@test.com', link: 'j.smith@test.com'}],
+                        URLlinks: [{ URL: 'https://www.regatta.com/mens', category: 'Mens', image: './images/heros/C2-Desktop.jpg' }, { URL: 'https://www.regatta.com/womens/', category: 'Womens', image: './images/heros/C1-Desktop.jpg' }, { URL: 'https://www.regatta.com/collections/holiday-shop/', category: 'Holiday Shop', image: './images/heros/C3-Desktop.jpg' }, {URL: 'https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/', category: 'Waterproof Jackets', image: './images/heros/C4-Desktop.jpg'}]
+                    }
+                }
             })  
         </script>
     </body>
