@@ -82,6 +82,25 @@
                     </div>
                 </div>
             </div>
+            <div id="bonus-task">
+                <div class="bonus-buttons">
+                    <button @click="increaseClick">Increase Number</button>
+                    <p class="dynamic-integer-increase">You clicked the button: 0 times.</p>
+                </div>
+                <div class="bonus-buttons double">
+                    <div class="double-buttons">
+                        <button class="up" @click="bothClick">Increase Number</button>
+                        <button class="down" @click="bothClick">Decrease Number</button>
+                    </div>
+                    <div>
+                        <p class="dynamic-integer-both">You clicked the button: 0 times.</p>
+                    </div>
+                </div>
+                <div class="bonus-buttons">
+                    <button @click="decreaseClick">Decrease Number</button>
+                    <p class="dynamic-integer-decrease">You clicked the button: 0 times.</p>
+                </div>
+            </div>
         </section>
         <footer>
             <span>© The Regatta Group</span>
@@ -93,8 +112,29 @@
                 data() {
                     return {
                         pressDetails: [{ data: 'John Smith' }, { data: '07700 000 000' }, { data: 'j.smith@test.com', link: 'j.smith@test.com'}],
-                        URLlinks: [{ URL: 'https://www.regatta.com/mens', category: 'Mens', image: './images/heros/C2-Desktop.jpg' }, { URL: 'https://www.regatta.com/womens/', category: 'Womens', image: './images/heros/C1-Desktop.jpg' }, { URL: 'https://www.regatta.com/collections/holiday-shop/', category: 'Holiday Shop', image: './images/heros/C3-Desktop.jpg' }, {URL: 'https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/', category: 'Waterproof Jackets', image: './images/heros/C4-Desktop.jpg'}]
+                        URLlinks: [{ URL: 'https://www.regatta.com/mens', category: 'Mens', image: './images/heros/C2-Desktop.jpg' }, { URL: 'https://www.regatta.com/womens/', category: 'Womens', image: './images/heros/C1-Desktop.jpg' }, { URL: 'https://www.regatta.com/collections/holiday-shop/', category: 'Holiday Shop', image: './images/heros/C3-Desktop.jpg' }, {URL: 'https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/', category: 'Waterproof Jackets', image: './images/heros/C4-Desktop.jpg'}],
+                        increase_integer: 0,
+                        decrease_integer: 0,
+                        both_integer: 0
                     }
+                },
+                methods: {
+                    increaseClick(){
+                        this. increase_integer++
+                        document.querySelector('.dynamic-integer-increase').innerHTML = `You clicked the button: ${this.increase_integer} times.`
+                    },
+                    decreaseClick(){
+                        this.decrease_integer++
+                        document.querySelector('.dynamic-integer-decrease').innerHTML = `You clicked the button: ${this.decrease_integer} times.`
+                    },
+                    bothClick(e){
+                        if (e.target.classList.contains('up')){
+                            this.both_integer++
+                        } else {
+                            this.both_integer--
+                        }
+                        document.querySelector('.dynamic-integer-both').innerHTML = `You clicked the button: ${this.both_integer} times.`
+                    },
                 }
             })  
         </script>

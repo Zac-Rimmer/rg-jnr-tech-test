@@ -159,9 +159,78 @@ footer {
     }
 }
 
-/* mobile styles */
+/* bonus task */
+#bonus-task{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
-@media (max-width: 490px){
+.bonus-buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#bonus-task button{
+    margin: 10px;
+    background-color: black;
+    color: white;
+    width: 190px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.double{
+    align-items: center;
+    border-right: grey solid 3px;
+    border-left: grey solid 3px;
+    margin: 0 30px 0 30px;
+    padding: 0 10px 0 10px;
+}
+
+/* bonus-task mobile */
+@media (max-width: 500px){
+    #bonus-task{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .bonus-buttons{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #bonus-task button{
+        margin: 10px;
+        background-color: black;
+        color: white;
+        width: 150px;
+        height: 50px;
+        border-radius: 15px;
+    }
+    
+    .double{
+        align-items: center;
+        border-right: grey solid 3px;
+        border-left: grey solid 3px;
+        margin: 0 30px 0 30px;
+        padding: 0 10px 0 10px;
+    }
+
+    .double div {
+        display: flex;
+    }
+
+    .bonus-buttons{
+
+    }
+  }
+
+/* mobile styles */
+@media (max-width: 500px){
     .item{
         width: 100vw;
     }
