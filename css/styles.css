@@ -165,4 +165,12 @@ footer {
     .item{
         width: 100vw;
     }
+
+    .press-area-inner{
+        width: 90%;
+    }
+
+    .about-text-inner {
+        width: 90%;
+    }
   }

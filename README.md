@@ -18,7 +18,9 @@
 <p>For bonus tasks, we are asking you to use the VueJS framework. This has been linked up in the HTML file using the CDN so you don't have to worry about doing so. Any script you write needs to be setup within the index.html file rather than an external file.</p>
 <p>If you are not fully comfortable using the VueJS framework, please try to complete the following bonus tasks as much as you can before submitting your final build. If you do try to complete the following tasks but don't manage to figure them out, please don't delete the code and just comment out. We will review the commented out code and can provide feedback.</p>
 <ol>
+
     <li>Instead of inputting the press contact details in through the HTML, using VueJS write a v-for that prints out the name and contact details for the press section.</li>
+
     <li>Again using VueJS, below the main content of the page create 2 buttons where one increments a number and the other decrements the a number. An example of what we are looking for can be found as an image file called 'Bonus-Task' within the 'test-content' folder.</li>
     <li>As a secondary task to the above, if the counter is equal to 0 then don't show the decrement button and if the counter is equal to 10, don't show the increment button. If counter is between 1-9, both buttons should appear.</li>
 </ol>
