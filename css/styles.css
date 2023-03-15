@@ -11,8 +11,58 @@ body {
   color: #202528;
 }
 
+/* navigation */
 #logo {
   max-width: 150px;
   display: block;
   margin: 0 auto;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 12px 0;
+  background-color: #f4f4f4;
+}
+
+#nav-wrapper {
+  width: 150px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  font-size: 12px;
+}
+
+nav li:nth-of-type(1) {
+  padding-right: 5px;
+}
+
+nav li:nth-of-type(2) {
+  padding: 0 6px;
+  border-left: 2px solid #202528;
+  border-right: 2px solid #202528;
+}
+
+nav li:nth-of-type(3) {
+  padding-left: 5px;
+}
+
+nav a {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
 }
