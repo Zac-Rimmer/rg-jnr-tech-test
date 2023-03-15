@@ -204,6 +204,32 @@ footer span {
   font-size: 13px;
 }
 
+#vue-counter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#counter-wrapper {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: solid 1px black;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
 /* Media query for screens smaller than 480 pixels */
 @media (max-width: 480px) {
   #logo {
@@ -284,6 +310,9 @@ footer span {
 
   footer span {
     font-size: 9px;
+  }
+  #vue-counter {
+    display: none;
   }
 }
 

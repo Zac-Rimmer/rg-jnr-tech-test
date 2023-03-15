@@ -109,7 +109,7 @@
           <h3>Welcome to Our Press Area</h3>
           <p>If you have a press enquiry our PR team will be happy to help.</p>
           <h4>Partnerships, Sponsorships and Enquires</h4>
-          <ul>
+          <!-- <ul>
             <li>John Smith</li>
             <li>07700 000 000</li>
             <li>
@@ -119,6 +119,19 @@
                 title="Contact J.Smith"
                 >j.smith@test.com</a
               >
+            </li>
+          </ul> -->
+          <ul>
+            <li v-for="(contact, index) in contacts" :key="index">
+              <template v-if="index === contacts.length - 1">
+                <a
+                  href="mailto:j.smith@test.com"
+                  target="_blank"
+                  title="Contact J.Smith"
+                  >j.smith@test.com</a
+                >
+              </template>
+              <template v-else> {{contact.details}} </template>
             </li>
           </ul>
         </div>
@@ -167,9 +180,55 @@
           </div>
         </div>
       </section>
+      <footer>
+        <span>© The Regatta Group</span>
+      </footer>
+      <div id="vue-counter">
+        <div id="counter-wrapper">
+          <div id="buttons">
+            <button v-if="showIncrement" v-on:click="increment">
+              increase number
+            </button>
+            <button v-if="showDecrement" v-on:click="decrement">
+              decrease number
+            </button>
+          </div>
+          <div id="text">
+            <p>You clicked the button {{ count }} times</p>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer>
-      <span>© The Regatta Group</span>
-    </footer>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "THIS IS A TEST STRING",
+          contacts: [
+            { id: 1, details: "John Smith" },
+            { id: 2, details: "07700 000 000" },
+            { id: 3, details: "j.smith@test.com" },
+          ],
+          count: 0,
+        },
+        methods: {
+          increment: function () {
+            this.count++;
+          },
+          decrement: function () {
+            this.count--;
+          },
+        },
+        computed: {
+          showDecrement: function () {
+            return this.count > 0;
+          },
+          showIncrement: function () {
+            return this.count < 10;
+          },
+        },
+      });
+    </script>
   </body>
 </html>
