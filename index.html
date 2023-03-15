@@ -109,6 +109,8 @@
           <h3>Welcome to Our Press Area</h3>
           <p>If you have a press enquiry our PR team will be happy to help.</p>
           <h4>Partnerships, Sponsorships and Enquires</h4>
+
+          <!-- Refactored with vue -->
           <!-- <ul>
             <li>John Smith</li>
             <li>07700 000 000</li>
@@ -137,42 +139,54 @@
         </div>
       </section>
 
+      <!-- I didnt see the urls for the categories till the end of the test, I have wrapped the images with anchor tags but the overlay I used prevents clicking, If I had more time I would fix this, it has been four hours so I will create the PR now, thank you! -->
       <section id="categories" class="section-container">
         <div id="grid-to-block" class="centered-content">
           <div class="image-grid">
             <div class="grid-item">
-              <img
-                src="./images/heros/C2-Desktop.jpg"
-                alt="Person climbing over rocks."
-              />
+              <a href="https://www.regatta.com/mens/">
+                <img
+                  src="./images/heros/C2-Desktop.jpg"
+                  alt="Person climbing over rocks."
+                />
+              </a>
               <div class="overlay">
                 <p>Mens</p>
               </div>
             </div>
 
             <div class="grid-item">
-              <img
-                src="./images/heros/C1-Desktop.jpg"
-                alt="Person smiling and hiking through fields."
-              />
+              <a href="https://www.regatta.com/womens/">
+                <img
+                  src="./images/heros/C1-Desktop.jpg"
+                  alt="Person smiling and hiking through fields."
+                />
+              </a>
               <div class="overlay">
                 <p>Womens</p>
               </div>
             </div>
             <div class="grid-item">
-              <img
-                src="./images/heros/C3-Desktop.jpg"
-                alt="Family fishing at the beach."
-              />
+              <a href="https://www.regatta.com/collections/holiday-shop/">
+                <img
+                  src="./images/heros/C3-Desktop.jpg"
+                  alt="Family fishing at the beach."
+              /></a>
+
               <div class="overlay">
                 <p>Holiday Shop</p>
               </div>
             </div>
             <div class="grid-item">
-              <img
-                src="./images/heros/C4-Desktop.jpg"
-                alt="Two people hugging and smiling in the rain."
-              />
+              <a
+                href="https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/"
+              >
+                <img
+                  src="./images/heros/C4-Desktop.jpg"
+                  alt="Two people hugging and smiling in the rain."
+                />
+              </a>
+
               <div class="overlay">
                 <p>Waterproof Jackets</p>
               </div>
