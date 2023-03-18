@@ -76,14 +76,14 @@
           <p>If you have a press enquiry our PR team will be happy to help.</p>
           <div class="contact">
             <h2>Partnerships, Sponsorships and Enquires</h2>
-            <ul v-for="contact in contacts">
-              <li :key="contact.id">{{contact.body}}</li>
+            <ul v-for="contact in contacts" :key="contact.id">
+              <li>{{contact.body}}</li>
             </ul>
           </div>
         </div>
       </section>
       <section class="categories-selection">
-        <div class="hero" v-for="category in categories">
+        <div class="hero" v-for="category in categories" :key="category.id">
           <img
             class="hero__mobile"
             :src="category.mobileImg"
@@ -94,7 +94,7 @@
             :src="category.desktopImg"
             :alt="category.title"
           />
-          <a :href="category.url" :key="category.id">{{category.title}}</a>
+          <a :href="category.url">{{category.title}}</a>
         </div>
       </section>
       <section class="bonus-tasks">
