@@ -77,9 +77,24 @@
           <div class="contact">
             <h2>Partnerships, Sponsorships and Enquires</h2>
             <ul v-for="contact in contacts">
-              <li>{{contact.body}}</li>
+              <li :key="contact.id">{{contact.body}}</li>
             </ul>
           </div>
+        </div>
+      </section>
+      <section class="categories-selection">
+        <div class="hero" v-for="category in categories">
+          <img
+            class="hero__mobile"
+            :src="category.mobileImg"
+            :alt="category.title"
+          />
+          <img
+            class="hero__desktop"
+            :src="category.desktopImg"
+            :alt="category.title"
+          />
+          <a :href="category.url" :key="category.id">{{category.title}}</a>
         </div>
       </section>
     </section>
@@ -92,25 +107,44 @@
         data: {
           message: "Hello Vue!",
           contacts: [
-            { body: "John Smith" },
-            { body: "07700 000 000" },
-            { body: "j.smith@test.com" },
+            { id: 1, body: "John Smith" },
+            { id: 2, body: "07700 000 000" },
+            { id: 3, body: "j.smith@test.com" },
           ],
           categories: [
-            { title: "Mens", url: "https://www.regatta.com/mens/" },
-            { title: "Womens", url: "https://www.regatta.com/womens/" },
             {
-              title: "Holiday Shop",
-              url: "https://www.regatta.com/collections/holiday-shop/",
+              id: 1,
+              title: "Mens",
+              url: "https://www.regatta.com/mens/",
+              mobileImg: "./images/heros/C2-Mobile.jpg",
+              desktopImg: "./images/heros/C2-Desktop.jpg",
             },
             {
+              id: 2,
+              title: "Womens",
+              url: "https://www.regatta.com/womens/",
+              mobileImg: "./images/heros/C1-Mobile.jpg",
+              desktopImg: "./images/heros/C1-Desktop.jpg",
+            },
+            {
+              id: 3,
+              title: "Holiday Shop",
+              url: "https://www.regatta.com/collections/holiday-shop/",
+              mobileImg: "./images/heros/C3-Mobile.jpg",
+              desktopImg: "./images/heros/C3-Desktop.jpg",
+            },
+            {
+              id: 4,
               title: "Waterproof Jackets",
               url: "https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/",
+              mobileImg: "./images/heros/C4-Mobile.jpg",
+              desktopImg: "./images/heros/C4-Desktop.jpg",
             },
           ],
         },
-        method: {},
+        methods: {},
       });
+      console.log(window.screen.width);
     </script>
   </body>
 </html>
