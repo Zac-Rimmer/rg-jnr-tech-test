@@ -97,6 +97,17 @@
           <a :href="category.url" :key="category.id">{{category.title}}</a>
         </div>
       </section>
+      <section class="bonus-tasks">
+        <div class="button-group">
+          <button v-show="totalValue > 0" @click="totalValue--">
+            Decrease Number
+          </button>
+          <button v-show="totalValue < 10" @click="totalValue++">
+            Increase Number
+          </button>
+        </div>
+        <p>You clicked the button: {{totalValue}} times.</p>
+      </section>
     </section>
     <footer class="footer">
       <span>© The Regatta Group</span>
@@ -141,10 +152,9 @@
               desktopImg: "./images/heros/C4-Desktop.jpg",
             },
           ],
+          totalValue: 0,
         },
-        methods: {},
       });
-      console.log(window.screen.width);
     </script>
   </body>
 </html>
