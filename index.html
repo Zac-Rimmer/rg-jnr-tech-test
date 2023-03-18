@@ -1,25 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>The Regatta Group Junior Front End Developer Tech Test</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link href="./css/styles.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    </head>
-    <body>
-        <header>
-            <img src="./images/Regatta-Group-Logo.png" alt="The Regatta Group" id="logo"/>
-        </header>
-        <section id="app">
-            <!-- Code Here -->
-        </section>
-        <footer>
-            <span>© The Regatta Group</span>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Regatta Group Junior Front End Developer Tech Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        src="./images/Regatta-Group-Logo.png"
+        alt="The Regatta Group"
+        id="logo"
+      />
+    </header>
+    <section id="app">
+      <!-- Code Here -->
+      <nav class="navbar">
+        <div class="navbar__links">
+          <a href="#app">Home</a>
+          <span>|</span>
+          <a href="#about">About</a>
+          <span>|</span>
+          <a href="#contact-us">Contact Us</a>
+        </div>
+      </nav>
+      <div class="main-banner">
+        <h1>
+          When our adventure began <br />
+          There were just 12 of us <br />
+          It was 1981
+        </h1>
+      </div>
+      <article class="about" id="about">
+        <h2>About Regatta</h2>
+        <p>
+          <strong
+            >When our adventure began, there were just 12 of us. It was
+            1981.</strong
+          >
+        </p>
+        <p>
+          Back then the outdoors was about intrepid explorers, but we just
+          wanted to open our front door and have fun. And we wanted everyone
+          else out there with us too.
+        </p>
+        <p>
+          So we made great products that people could afford, clothing to get
+          them outside and enjoying the fresh air without worrying what it would
+          cost. That’s still what counts for us.
+        </p>
+        <p>
+          And we’re still doing it. Still thinking of new ways to help people,
+          still inspired by the great outdoors and still hanging by the front
+          door when you need us.
+        </p>
+        <p>There were 12 of us</p>
+        <p>Now there are millions</p>
+        <p><strong>For every adventure</strong></p>
+      </article>
+      <section class="press" id="contact-us">
+        <div class="press__banner">
+          <h1>Press</h1>
+        </div>
+        <div class="press__content">
+          <h2>Welcome to Our Press Area</h2>
+          <p>If you have a press enquiry our PR team will be happy to help.</p>
+          <div class="contact">
+            <h2>Partnerships, Sponsorships and Enquires</h2>
+            <ul v-for="contact in contacts" :key="contact.id">
+              <li>{{contact.body}}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="categories-selection">
+        <div class="hero" v-for="category in categories" :key="category.id">
+          <img
+            class="hero__mobile"
+            :src="category.mobileImg"
+            :alt="category.title"
+          />
+          <img
+            class="hero__desktop"
+            :src="category.desktopImg"
+            :alt="category.title"
+          />
+          <a :href="category.url">{{category.title}}</a>
+        </div>
+      </section>
+      <section class="bonus-tasks">
+        <div class="button-group">
+          <button v-show="totalValue > 0" @click="totalValue--">
+            Decrease Number
+          </button>
+          <button v-show="totalValue < 10" @click="totalValue++">
+            Increase Number
+          </button>
+        </div>
+        <p>You clicked the button: {{totalValue}} times.</p>
+      </section>
+    </section>
+    <footer class="footer">
+      <span>© The Regatta Group</span>
+    </footer>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hello Vue!",
+          contacts: [
+            { id: 1, body: "John Smith" },
+            { id: 2, body: "07700 000 000" },
+            { id: 3, body: "j.smith@test.com" },
+          ],
+          categories: [
+            {
+              id: 1,
+              title: "Mens",
+              url: "https://www.regatta.com/mens/",
+              mobileImg: "./images/heros/C2-Mobile.jpg",
+              desktopImg: "./images/heros/C2-Desktop.jpg",
+            },
+            {
+              id: 2,
+              title: "Womens",
+              url: "https://www.regatta.com/womens/",
+              mobileImg: "./images/heros/C1-Mobile.jpg",
+              desktopImg: "./images/heros/C1-Desktop.jpg",
+            },
+            {
+              id: 3,
+              title: "Holiday Shop",
+              url: "https://www.regatta.com/collections/holiday-shop/",
+              mobileImg: "./images/heros/C3-Mobile.jpg",
+              desktopImg: "./images/heros/C3-Desktop.jpg",
+            },
+            {
+              id: 4,
+              title: "Waterproof Jackets",
+              url: "https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/",
+              mobileImg: "./images/heros/C4-Mobile.jpg",
+              desktopImg: "./images/heros/C4-Desktop.jpg",
+            },
+          ],
+          totalValue: 0,
+        },
+      });
+    </script>
+  </body>
 </html>
