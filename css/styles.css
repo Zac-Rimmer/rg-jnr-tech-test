@@ -205,13 +205,13 @@ body {
         background-color: rgb(243, 243, 243);
     }
     
-    .bonus-button {
+    #bonus-button {
         display: block;
         margin-top: 2px;
     }
 }
 
-.bonus-section {
+#bonus-section {
     background-color: white;
     text-align: center;
     margin-right: 3px;
