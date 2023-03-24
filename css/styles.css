@@ -9,3 +9,223 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+#nav {
+    background-color: rgb(243, 243, 243);
+}
+
+#nav-list {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-weight: 500;
+    margin: 13px;
+    padding: 15px;
+}
+
+#nav-list li {
+    display: inline-block;
+    padding: 2px;
+}
+
+#nav-list li::after {
+    padding-left: 2px;
+    content: "|";
+}
+
+#nav-list li:last-child::after {
+    content: none;
+}
+
+@media only screen and (min-width: 550px) {
+    #main-banner {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background: url("../images/banners/Main-Banner.jpeg") no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #press-banner {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        background: url("../images/banners/Press-Banner.jpeg") no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .banner-txt {
+        margin: 0 auto;
+        font-size: 200%;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+
+    .content {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 30px;
+    }
+
+    #categories {
+        display: grid;
+        margin-left: 14%;
+        margin-right: 14%;
+        padding: 0;
+        list-style: none;
+    }
+
+    #categories li {
+        display: flex;
+        position: relative;
+        margin: 5px;
+        padding-top: 41%;
+        padding-bottom: 41%;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;background-position: center;
+    }
+    
+    #categories li:nth-child(4) {
+        grid-column: 2;
+    }
+}
+
+@media only screen and (max-width: 549px) {
+    #main-banner {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: url("../images/banners/Main-Banner.jpeg") no-repeat;
+        background-size: cover;
+    }
+
+    #press-banner {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        background: url("../images/banners/Press-Banner.jpeg") no-repeat;
+        background-size: cover;
+    }
+
+    .banner-txt {
+        margin: 0 auto;
+        font-size: 170%;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+
+    .content {
+        margin: 12px;
+    }
+
+    #categories {
+        list-style: none;
+        padding: 0;
+    }
+
+    #categories li {
+        position: relative;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 100%;
+        padding-top: 165px;
+        padding-bottom: 165px;
+        background-size: cover;
+        justify-content: center;
+    }    
+}
+
+#categories-mens {
+    background: url("../images/heros/C2-Mobile.jpg") no-repeat;
+}
+
+#categories-womens {
+    background: url("../images/heros/C1-Mobile.jpg") no-repeat;
+}
+
+#categories-holiday-shop {
+    background: url("../images/heros/C3-Mobile.jpg") no-repeat;
+}
+
+#categories-waterproof-jackets {
+    background: url("../images/heros/C4-Mobile.jpg") no-repeat;
+}
+
+.categories-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.categories-link {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 110%;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 550px) {
+    #bonus-task {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        background-color: rgb(243, 243, 243);
+    }
+}
+
+@media only screen and (max-width: 549px) {
+    #bonus-task {
+        display: block;
+        justify-content: center;
+        padding-top: 10px;
+        background-color: rgb(243, 243, 243);
+    }
+    
+    #bonus-button {
+        display: block;
+        margin-top: 2px;
+    }
+}
+
+#bonus-section {
+    background-color: white;
+    text-align: center;
+    margin-right: 3px;
+    margin-left: 3px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.bonus-button {
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 90%;
+    font-weight: 400;
+    color: white;
+    background-color: black;
+}

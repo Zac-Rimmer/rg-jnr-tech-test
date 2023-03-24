@@ -16,10 +16,119 @@
             <img src="./images/Regatta-Group-Logo.png" alt="The Regatta Group" id="logo"/>
         </header>
         <section id="app">
-            <!-- Code Here -->
+            <section id="nav">
+                <ul id="nav-list">
+                    <li>
+                        <a>Home</a>
+                    </li>
+                    <li>
+                        <a>About</a>
+                    </li>
+                    <li>
+                        <a>Contact Us</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="main-banner">
+                <p class="banner-txt">
+                    When our adventure began<br>
+                    There were just 12 of us<br>
+                    It was 1981
+                </p>
+            </section>
+            <section class="content">
+                <h2>About Regatta</h2>
+                    <b>When our adventure began, there were just 12 of us. It was 1981.</b>
+                    <p>Back then the outdoors was about intrepid explorers, but we just wanted to open our front door and have fun. And we wanted everyone else out there with us too.</p>
+                    <p>So we made great products that people could afford, clothing to get them outside and enjoying the fresh air without worrying what it would cost. That’s still what counts for us.</p>
+                    <p>And we’re still doing it. Still thinking of new ways to help people, still inspired by the great outdoors and still hanging by the front door when you need us.</p>
+                    <p>And it’s still what counts for the ramblers, amblers, hikers and bikers. campers and gardeners and daily commuters, dog walkers, show jumpers and multi-tasking mums, picnickers, backpackers, kids playing ball and dads at the footie, urban roamers and beachcombers and puddle-loving children and everyone else we’ve helped start their own adventure.</p>
+                    <p>There were 12 of us</p>
+                    <p>Now there are millions</p>
+                    <b>For every adventure</b>
+            </section>
+            <section id="press-banner">
+                <p class="banner-txt">Press</p>
+            </section>
+            <section class="content">
+                <h2>Welcome to Our Press Area</h2>
+                <p>If you have a press enquiry our PR team will be happy to help.</p>
+                <h2>Partnerships, Sponsorships and Enquires</h2>
+                <ul id="details">
+                    <li v-for="item in items">
+                        {{ item.text }}
+                    </li>
+                </ul>
+            </section>
+            <ul id="categories">
+                <li id="categories-mens">
+                    <section class="categories-content">
+                        <a href="https://www.regatta.com/mens/" class="categories-link">Mens</a>
+                    </section>
+                </li>
+                <li id="categories-womens">
+                    <section class="categories-content">
+                        <a href="https://www.regatta.com/womens/" class="categories-link">Womens</a>
+                    </section>
+                </li>
+                <li id="categories-holiday-shop">
+                    <section class="categories-content">
+                        <a href="https://www.regatta.com/collections/holiday-shop/" class="categories-link">Holiday Shop</a>
+                    </section>
+                </li>
+                <li id="categories-waterproof-jackets">
+                    <section class="categories-content">
+                        <a href="https://www.regatta.com/clothing/jackets-coats/waterproof-jackets/" class="categories-link">Waterproof Jackets</a>
+                    </section>
+                </li>
+            </ul>
         </section>
-        <footer>
+        <footer id="footer">
             <span>© The Regatta Group</span>
         </footer>
+        <section id="bonus-task">
+            <section id="bonus-section">
+                <a class="bonus-button" v-on:click="decreaseCounter('count')" v-if="checkPositiveCounter">Decrease Number</a>
+                <a class="bonus-button" v-on:click="increaseCounter('count')" v-if="checkNegativeCounter">Increase Number</a>
+                <p id="bonus-count">You clicked the button: {{ count }} times.</p>
+            </section>
+        </section>
+        <script type="module">
+            import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.esm.browser.js'
+          </script>
+        <script>
+            const card = new Vue({
+                el: "#details",
+                data: {
+                    items: [
+                        {text: "John Smith"},
+                        {text: "07700 000 000"},
+                        {text: "j.smith@test.com"}
+                    ]
+                }
+            })
+            const app = new Vue({
+                el: "#bonus-task",
+                data: {
+                    count: 0,
+                },
+                methods: {
+                    increaseCounter: function(count) {
+                        this[count] +=1;
+                    },
+                    decreaseCounter: function(count) {
+                        this[count] -=1; 
+                    }
+                },
+                computed: {
+                    checkPositiveCounter(count) {
+                        return this.count > 0;
+                    },
+                    checkNegativeCounter(count) {
+                        return this.count < 10
+                    }
+                }
+            })
+        </script>
     </body>
 </html>
