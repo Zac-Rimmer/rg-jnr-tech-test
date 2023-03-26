@@ -56,7 +56,7 @@ a:active {
 /* Main Banner */
 
 .mainBanner {
-    background-image: url(./images/Main-Banner.jpeg);
+    background-image: url(../images/banners/Main-Banner.jpeg);
     background-repeat: no-repeat;
     height: 280px;
     width: 100%;
@@ -84,7 +84,7 @@ a:active {
 /* Press Banner */
 
 .pressBanner {
-    background-image: url(./images/Press-Banner.jpeg);
+    background-image: url(../images/banners/Press-Banner.jpeg);
     background-repeat: no-repeat;
     height: 280px;
     width: 100%;
